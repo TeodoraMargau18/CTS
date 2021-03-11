@@ -1,5 +1,7 @@
 package ro.ase.cts.clase;
 
+import java.util.Arrays;
+
 public abstract class Aplicant {
 	protected String nume;
 	protected String prenume;
@@ -32,11 +34,16 @@ public abstract class Aplicant {
 		this.varsta = varsta;
 	}
 
-	public void statut() {
-		if (punctaj > 80)
-			System.out.println("Aplicantul " + nume + " " + prenume + " a fost acceptat.");
-		else
-			System.out.println("Aplicantul " + nume + " " + prenume + " nu a fost acceptat.");
+	public void afisareStatutInProiect(Proiect proiect) {
+		StringBuilder str=new StringBuilder("Aplicantul ");
+		str.append(nume);
+		str.append(" ");
+		str.append(prenume);
+		str.append(" ");
+		str.append( (punctaj > proiect.getPragAcceptare()) ?
+				" a fost acceptat." : "nu a fost acceptat.");
+		System.out.println(str.toString());
+		
 	}
 
 	public int getPunctaj() {
@@ -52,7 +59,7 @@ public abstract class Aplicant {
 	}
 
 	public void setNr_proiecte(int nr_proiecte) {
-
+		this.nr_proiecte=nr_proiecte;
 	}
 
 	public String[] getDenumireProiect() {
@@ -83,6 +90,13 @@ public abstract class Aplicant {
 	}
 	
 	public abstract float getSumaFinantata() ;
+
+	@Override
+	public String toString() {
+		return " nume=" + nume + ", prenume=" + prenume + ", varsta=" + varsta + ", punctaj=" + punctaj
+				+ ", nr_proiecte=" + nr_proiecte + ", denumireProiect=" + Arrays.toString(denumireProiect);
+	}
+	
 	
 	
 
