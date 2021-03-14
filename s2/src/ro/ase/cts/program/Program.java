@@ -9,24 +9,22 @@ import ro.ase.cts.clase.Proiect;
 import ro.ase.cts.clase.Student;
 import ro.ase.cts.clase.UniversalReader;
 import ro.ase.cts.clase.reader.AngajatReader;
+import ro.ase.cts.clase.reader.ElevReader;
+import ro.ase.cts.clase.reader.StudentReader;
 
 public class Program {
 
 	public static void main(String[] args) {
 		
-		
-		
-//		System.out.println(Student.getFinantare());
-//		System.out.println(Angajat.getFinantare());
 		List<Aplicant> listaAplicanti;
 		try {
-			listaAplicanti = UniversalReader.readAplicants(new AngajatReader("angajati.txt"));
+			listaAplicanti = UniversalReader.readAplicants(new ElevReader("elevi.txt"));
 			Proiect proiect=new Proiect(80);
 			for (Aplicant aplicant : listaAplicanti)
 				{
 				System.out.println(aplicant.toString());
 				System.out.println(aplicant.getSumaFinantata());
-				aplicant.afisareStatutInProiect(proiect);;
+				aplicant.afisareStatutProiect(proiect);;
 				}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

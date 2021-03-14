@@ -11,28 +11,27 @@ import ro.ase.cts.clase.Student;
 
 public class StudentReader extends Reader {
 
-	
-	
 	public StudentReader(String fileName) {
 		super(fileName);
 	}
 
-	public  List<Aplicant> readAplicants() throws FileNotFoundException, NumberFormatException {
+	public List<Aplicant> readAplicants() throws FileNotFoundException, NumberFormatException {
 		Scanner input = new Scanner(new File(super.fileName));
 		input.useDelimiter(",|\n");
-		List<Aplicant> studenti = new ArrayList<Aplicant>();
+		List<Aplicant> listaStudenti = new ArrayList<Aplicant>();
 
 		while (input.hasNext()) {
-			Student s=new Student();
+
+			Student s = new Student();
 			super.readAplicant(input, s);
 			int an_studii = input.nextInt();
 			String facultate = (input.next()).toString();
 			s.setAn_studii(an_studii);
 			s.setFacultate(facultate);
-			studenti.add(s);
+			listaStudenti.add(s);
 		}
 
 		input.close();
-		return studenti;
+		return listaStudenti;
 	}
 }
