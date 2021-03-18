@@ -6,7 +6,7 @@ public class Tâmplar{
 	private int vechime;
 	private int varsta;
 	
-	public static Tâmplar instance=null;
+	private static Tâmplar instance=null;
 	public static synchronized Tâmplar getInstance(String nume, int vechime, int varsta) {
 		if(instance==null) {
 			instance=new Tâmplar(nume, vechime, varsta);
