@@ -1,20 +1,20 @@
 package ro.ase.cts.clase;
 
-public class Tamplar{
+public class Tâmplar{
 	
 	private String nume;
 	private int vechime;
 	private int varsta;
 	
-	public static Tamplar instance=null;
-	public static synchronized Tamplar getInstance(String nume, int vechime, int varsta) {
+	public static Tâmplar instance=null;
+	public static synchronized Tâmplar getInstance(String nume, int vechime, int varsta) {
 		if(instance==null) {
-			instance=new Tamplar(nume, vechime, varsta);
+			instance=new Tâmplar(nume, vechime, varsta);
 		}
 		return instance;
 	}
 	
-	private Tamplar(String nume, int vechime, int varsta) {
+	private Tâmplar(String nume, int vechime, int varsta) {
 		super();
 		this.nume = nume;
 		this.vechime = vechime;
