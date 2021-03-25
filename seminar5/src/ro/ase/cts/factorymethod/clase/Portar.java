@@ -1,4 +1,4 @@
-package ro.ase.cts.factory.clase;
+package ro.ase.cts.factorymethod.clase;
 
 public class Portar extends Jucator {
 
