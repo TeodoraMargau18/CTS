@@ -1,5 +1,5 @@
 package ro.ase.cts.clase;
-
+//amana cat de mult initializarea obiectului
 public class ManagerSpitalLazy {
 	private String nume;
 	private int marca;

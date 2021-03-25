@@ -2,7 +2,7 @@ package ro.ase.cts.program;
 
 import ro.ase.cts.clase.ManagerSpital;
 import ro.ase.cts.clase.ManagerSpitalLazy;
-import ro.ase.cts.clase.Tâmplar;
+import ro.ase.cts.clase.Tamplar;
 
 public class Main {
 
@@ -28,12 +28,11 @@ public class Main {
 		
 		//3.ThreadSafe
 		System.out.println("ThreadSafe");
-		Tâmplar tamplar1=Tâmplar.getInstance("Marcel",10,40);
-		Tâmplar tamplar2=Tâmplar.getInstance("Mircea",20,54);
+		Tamplar tamplar1=Tamplar.getInstance("Marcel",10,40);
+		Tamplar tamplar2=Tamplar.getInstance("Mircea",20,54);
 
 		tamplar2.setVarsta(40);
-		tamplar2.setNume("Ionel");
-		
+		tamplar2.setNume("Coco");
 		
 		System.out.println( tamplar1.toString());
 		System.out.println(tamplar2.toString());

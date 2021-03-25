@@ -11,9 +11,8 @@ public class Main {
 		Zoo zoo=new Zoo();
 		Giraffe g1=new Giraffe("Maia",300);
 		Giraffe g2=new Giraffe("Lola");
-		
-		Zebra z1=new Zebra("ZebraRoz");
-		Zebra z2=new Zebra("ZebraVerde");
+		Zebra z1=new Zebra("Zebra Roz");
+		Zebra z2=new Zebra("Zebra Verde");
 		
 		zoo.addAnimal(g1);
 		zoo.addAnimal(g2);
