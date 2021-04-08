@@ -20,10 +20,11 @@ public class ProgramAdapter {
 
 		BiletOnline biletOnline=new BiletAdapter(12);
 		Bilet bilet=new BiletAdapter(22);
+		Bilet bilet1=new Bilet(18);
 		rezeervaSiVindeBiletOnline(biletOnline);
 		rezeervaSiVindeBiletCasa(bilet);
 		
-		AdapterObiecteBilet adapterObiecte=new AdapterObiecteBilet(bilet);
+		AdapterObiecteBilet adapterObiecte=new AdapterObiecteBilet(bilet1);
 		rezeervaSiVindeBiletOnline(adapterObiecte);
 	}
 
