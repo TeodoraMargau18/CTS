@@ -6,7 +6,6 @@ public class RezervareBuilder implements Builder {
 	
 	@Override
 	public Rezervare build() {
-		
 		return this.rezervare;
 	}
 
