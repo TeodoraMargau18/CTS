@@ -5,29 +5,11 @@ public class Proxy implements IOperatorRezervare {
 	private OperatorRezervare operator;
 	private int numarMinimPersoane;
 	
-	
-	
-
 	public Proxy(OperatorRezervare operator, int numarMinimPersoane) {
 		super();
 		this.operator = operator;
 		this.numarMinimPersoane = numarMinimPersoane;
 	}
-
-
-
-
-	public OperatorRezervare getOperator() {
-		return operator;
-	}
-
-
-
-
-	public int getNumarMinimPersoane() {
-		return numarMinimPersoane;
-	}
-
 
 
 
